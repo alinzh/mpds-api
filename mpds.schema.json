@@ -9,7 +9,7 @@
             "additionalProperties": true,
             "properties": {
                 "props": {
-                    "description": "Any of the three levels of the physical properties (domains, categories and properties per se, see https://mpds.io/#hierarchy); SINGLE: combination of several terms is not supported; CASE-INSENSITIVE",
+                    "description": "Any of the three levels of the physical properties (domains, categories and properties per se, see https://mpds.io/hierarchy); SINGLE: combination of several terms is not supported; CASE-INSENSITIVE",
                     "type": "string"
                 },
                 "elements": {
@@ -541,7 +541,7 @@
                     "type": "object"
                 },
                 "temp": {
-                    "description": "Rectangular plot: temperature range (Y-axis); triangular plot: isotherm value(s) or none for *projection* *diatypes*; always in Celsius; lower value refers to an axis and can be less than -273.15",
+                    "description": "Rectangular plot: temperature range (Y-axis); triangular plot: isotherm value(s) or none for *projection* *diatypes*; always in degrees Celsius; lower value refers to a drawing axis and can be less than the absolute zero -273.15 degrees",
                     "type": "array",
                     "minItems": 0,
                     "maxItems": 2,
