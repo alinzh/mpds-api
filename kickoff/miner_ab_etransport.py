@@ -23,7 +23,6 @@ for entry in mpds_api.get_data({'props': 'electrical conductivity'}, fields={}):
 
     p = requests.get(archive_url)
     if p.status_code != 200:
-        logging.critical('ARCHIVE %s IS UNAVAILABLE' % archive_url)
         continue
 
     print('Analyzing the raw data for %s' % entry['sample']['material']['entry'])

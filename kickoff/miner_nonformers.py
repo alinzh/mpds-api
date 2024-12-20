@@ -78,12 +78,12 @@ def get_nonformers(api_client):
                 points = pd_svg_to_points(area['svgpath'])
                 if len(points) == 2:
                     # This is a line compound
-                    x0, y0 = points[0]
-                    x1, y1 = points[1]
+                    x0, _ = points[0]
+                    x1, _ = points[1]
                 else:
                     # This is a phase area polygon
                     poly = Polygon(points)
-                    x0, y0, x1, y1 = poly.bounds
+                    x0, _, x1, _ = poly.bounds
 
                 # Here we have a continuous solid solution case, e.g. Au-Cu
                 if almost_equal(x1 - x0, 100):
